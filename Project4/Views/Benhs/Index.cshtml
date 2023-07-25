@@ -1,0 +1,80 @@
+﻿@model IPagedList<Project4.Models.Benh>
+@using PagedList.Mvc;
+@using PagedList;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h2>Quản lý bệnh tật của phạm nhân</h2>
+<br />
+<br />
+@using (Html.BeginForm("Index", "Benhs", FormMethod.Get))
+{
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-4">
+                @Html.TextBox("txtTenPhamNhan", "", null, new
+               {
+                   @class = "form-control",
+                   @placeholder = "Tên phạm nhân"
+               })
+            </div>
+            <div class="col-md-8">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+<br /><p>@Html.ActionLink("Thêm mới", "Create")</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().PhamNhan.TenPhamNhan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayBatDauChuaTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayChuaTri)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhamNhan.TenPhamNhan)
+            </td>
+            <td>
+                @if (item.NgayBatDauChuaTri.HasValue)
+                {
+                    <p>@item.NgayBatDauChuaTri.Value.ToString("dd/MM/yyyy")</p>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayChuaTri)
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID })
+                @*@Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) *@|
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ID })
+            </td> 
+        </tr>
+    }
+
+</table>
+
+<br />
+<p style="text-align:center">
+    <div style="font-size: x-large;">
+        @Html.PagedListPager(Model, i => Url.Action("Index", "Benhs", new
+           {
+               txtTenPhamNhan = Request.QueryString["txtTenPhamNhan"],
+            i
+           }))
+    </div>
+</p>

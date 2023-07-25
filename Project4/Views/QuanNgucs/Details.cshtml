@@ -1,0 +1,105 @@
+﻿@model Project4.Models.QuanNguc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<style>
+    div .row {
+        font-family: Arial, sans-serif;
+    }
+</style>
+<br />
+<h2>Hồ sơ chi tiết quản ngục</h2>
+<br />
+<br />
+<div class="row" id="quanNgucForm">
+    <div class="col-md-5" style="border: 3px">
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.TenQuanNguc):
+                @Html.DisplayFor(modelItem => Model.TenQuanNguc)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.NgaySinh):
+
+                @if (Model.NgaySinh.HasValue)
+                {
+                    <span>@Model.NgaySinh.Value.ToString("dd/MM/yyyy")</span>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.KhuID) quản lý:
+                @Html.DisplayFor(modelItem => Model.Khu.TenKhu)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.NamCongTac):
+                @if (Model.NamCongTac.HasValue)
+                {
+                    <span>@Model.NamCongTac.Value.ToString("dd/MM/yyyy")</span>
+                }
+            </div> 
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.ThoiHanCongTac): 
+                @if (Model.ThoiHanCongTac.HasValue)
+                {
+                    <span>@Model.ThoiHanCongTac.Value.ToString("dd/MM/yyyy")</span> 
+                } 
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.CMND):
+                @Html.DisplayFor(modelItem => Model.CMND)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.ChucVu):
+                @if (Model.ChucVu > 0)
+                { 
+                    @(((Dictionary<int, string>)ViewBag.ChucVu)[Model.ChucVu]);
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.QuanHam): 
+                @if (Model.QuanHam > 0)
+                {
+                    @(((Dictionary<int, string>)ViewBag.QuanHam)[Model.QuanHam]);
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        @if (String.IsNullOrEmpty(Model.AnhNhanDien))
+        {
+            <img src="~/Common/Image/no-image-icon-23485.png" class="img-fluid" alt="Image" width="400" height="500" />
+        }
+        else
+        {
+            <img src="@Url.Content(Model.AnhNhanDien)" class="img-fluid" alt="Image" width="400" height="500" />
+        }
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div>
+    @Html.ActionLink("Quay lại trang", "Index")
+</div>
+<br />
+<br />

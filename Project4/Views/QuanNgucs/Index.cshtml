@@ -1,0 +1,177 @@
+﻿@model IPagedList<Project4.Models.QuanNguc>
+@using PagedList.Mvc;
+@using PagedList;
+<link rel="stylesheet" href="~/Content/tableResponsive.css" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<h2>Danh sách quản ngục</h2>
+<br />
+@using (Html.BeginForm("Index", "QuanNgucs", FormMethod.Get))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBox("tenQuanNguc", "", null, new
+                {
+                    @class = "form-control",
+                    @placeholder = "Tên quản ngục"
+                })
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("khuID", new SelectList(ViewBag.Khu, "ID", "TenKhu"
+                     , ViewBag.SelectedKhu), new { @class = "form-control", @id = "txtKhu" })
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+    </div>
+}
+<br /><p>@Html.ActionLink("Thêm mới", "Create")</p>
+
+<div class="scrollmenu">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().TenQuanNguc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().AnhNhanDien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().NgaySinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().QueQuan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().GioiTinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().KhuID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().NamCongTac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ThoiHanCongTac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CMND)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ChucVu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().QuanHam)
+            </th>
+            <th></th>
+        </tr>
+        @if (Model.Count() < 1)
+        {
+            <tr>
+                <td colspan="11">
+                    <p style="color: red; text-align: center">Không tìm thấy bản ghi nào</p>
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenQuanNguc)
+                    </td>
+                    <td>
+                        @if (String.IsNullOrEmpty(item.AnhNhanDien))
+                        {
+                            <img src="~/Common/Image/no-image-icon-23485.png" class="img-fluid" alt="Image" width="200" height="300" />
+                        }
+                        else
+                        {
+                            <img src="@Url.Content(item.AnhNhanDien)" class="img-fluid" alt="Image" width="200" height="300" />
+                        }
+                    </td>
+                    <td>
+                        @if (item.NgaySinh.HasValue)
+                        {
+                            <p>@item.NgaySinh.Value.ToString("dd/MM/yyyy")</p>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QueQuan)
+                    </td>
+                    <td>
+                        Nam
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Khu.TenKhu)
+                    </td>
+                    <td>
+                        @if (item.NamCongTac.HasValue)
+                        {
+                            <p>@item.NamCongTac.Value.ToString("dd/MM/yyyy")</p>
+                        }
+                    </td>
+                    <td>
+                        @if (item.ThoiHanCongTac.HasValue)
+                        {
+                            <p>@item.ThoiHanCongTac.Value.ToString("dd/MM/yyyy")</p>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CMND)
+                    </td>
+                    <td>
+                        @if (item.ChucVu > 0)
+                        {
+                            @(((Dictionary<int, string>)ViewBag.ChucVu)[item.ChucVu]);
+                        }
+                    </td>
+                    <td>
+                        @if (item.QuanHam > 0)
+                        {
+                            @(((Dictionary<int, string>)ViewBag.QuanHam)[item.QuanHam]);
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+<p style="text-align:center">
+    <div style="font-size: x-large; padding: 20px">
+        @Html.PagedListPager(Model, i => Url.Action("Index", "QuanNgucs", new
+        {
+           i,
+            tenQuanNguc = Request.QueryString["tenQuanNguc"],
+           khuID = Request.QueryString["khuID"]
+        }))
+    </div>
+</p>
+
+
+@section scripts{
+    <script>
+        function TimKiem() {
+            var txtTenHoacMa = $("#txtTenHoacMa").text();
+            var txtKhu = $("#txtKhu").val();
+            var link = '@Html.Raw(Url.Action("TimKiem", "QuanNgucs", new { @txtTenHoacMa = "-1" , @khuID = "-2" }))';
+            link = link.replace("-1", txtTenHoacMa);
+            link = link.replace("-2", txtKhu);
+            $('#table').load(link);
+        }
+    </script>
+}

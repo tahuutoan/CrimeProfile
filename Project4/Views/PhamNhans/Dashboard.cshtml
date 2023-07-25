@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+ 
+<h2>Biểu đồ</h2>
+<br /> @Html.Partial("_Filter4Chart")
+@*@using (Html.BeginForm("Filter4Chart", "PhamNhans", FormMethod.Get))
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">Năm</div>
+                <div class="col-md-3">
+                    @Html.DropDownList("year", new SelectList(ViewBag.Year, ViewBag.SelectedYear)
+                 , new { @class = "form-control", @id = "txtYear" })
+                </div>
+                <div class="col-md-1">Tháng</div>
+                <div class="col-md-3">
+                    @Html.DropDownList("month", new SelectList(ViewBag.Month)
+                 , new { @class = "form-control", @id = "txtMonth" })
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary" onclick="TimKiem()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }*@
+<style>
+    #chart_container {
+        width: 1200px;
+        height: 500px;
+        border: 1px solid #ddd;
+        padding: 1px;
+        border-radius: 4px;
+    }
+</style>
+<script src="~/Scripts/Chart.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+<br />
+<div id="chart_container" style="position: relative; height:40vh; width:80vw">
+    <canvas id="myChart"></canvas>
+</div> 
+
+@section scripts{
+    <script>
+        var reArray = @Html.Raw(Json.Encode(ViewBag.REP));
+        var vaoTrai = @Html.Raw(Json.Encode(ViewBag.VaoTrai));
+
+        var ctx = document.getElementById('myChart'); // node
+        var ctx = document.getElementById('myChart').getContext('2d'); // 2d context
+        var ctx = $('#myChart'); // jQuery instance
+        var ctx = 'myChart'; // element id
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: vaoTrai,
+                datasets: [{
+                    label: "Số tù nhân vào trại",
+                    data: reArray,
+                    backgroundColor: "rgba(60, 179, 113, 0.3)",
+                    borderColor: "rgb(60, 179, 113)",
+                    borderWidth: 1
+                }]
+                    },
+                    options: {
+                        elements: {
+                            line: {
+                                tension: 0
+                            }
+                        },
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{ ticks: { beginAtZero: true } }],
+                            yAxes: [{ ticks: { beginAtZero: true } }]
+                        },
+
+                        legend: { display: false }
+                    }
+                });
+
+                function LoadFilter() {
+                    var year = $("#txtYear").val();
+                    var link = '@Url.Action("Filter4Chart", "PhamNhans", new { @year = "-1" })';
+                    link = link.replace("-1", year);
+                    $('#filter4Chart').load(link);
+                }
+    @*function TimKiem() {
+                //var txtTenHoacMa = $("#txtTenHoacMa").text();
+        var txtMonth = $("#txtMonth").val();
+        var txtYear = $("#txtYear").val();
+        var link = '@Html.Raw(Url.Action("Filter4Chart", "PhamNhans", new { @month = "-1" , @year = "-2"  }))';
+        link = link.replace("-1", txtMonth);
+        link = link.replace("-2", txtYear);
+        $('#chart_container').load(link);
+    }*@
+
+    </script>
+}

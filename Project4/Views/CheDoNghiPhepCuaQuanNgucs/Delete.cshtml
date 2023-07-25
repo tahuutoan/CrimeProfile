@@ -1,0 +1,22 @@
+﻿@model Project4.Models.CheDoNghiPhepCuaQuanNguc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<br />
+<h3>
+    Xác nhận xóa nghỉ phép quản ngục: @Html.DisplayFor(model => model.QuanNguc.TenQuanNguc)
+</h3>
+<br />
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại trang", "Index")
+        </div>
+    }
+</div>

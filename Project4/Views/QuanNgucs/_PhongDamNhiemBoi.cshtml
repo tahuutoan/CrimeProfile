@@ -1,0 +1,11 @@
+﻿@{ 
+    var phong = (List<Project4.Models.PhongGiam>)ViewBag.Phong;
+}
+<div id="banGiao">
+    @foreach (var item in phong)
+    {
+        <input name="phongName" value="@item.TenPhong" readonly="readonly" />
+        @Html.DropDownList("QuanNgucDamNhiem", new SelectList(ViewBag.QuanNgucDamNhiem, "ID", "TenQuanNguc", null))<br />
+    }
+</div>
+

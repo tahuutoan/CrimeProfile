@@ -1,0 +1,23 @@
+﻿@using (Html.BeginForm("Dashboard", "PhamNhans", FormMethod.Get))
+{
+    <div class="container" id="filter4Chart">
+        <div class="row">
+            <div class="col-md-1">Năm</div>
+            <div class="col-md-3">
+                @Html.DropDownList("year", new SelectList(ViewBag.Year, ViewBag.SelectedYear)
+             , new { @class = "form-control", @id = "txtYear", @onchange = "LoadFilter()" })
+            </div>
+            <div class="col-md-1">Tháng</div>
+            <div class="col-md-3">
+                @Html.DropDownList("month", new SelectList(ViewBag.Month)
+             , new { @class = "form-control", @id = "txtMonth" })
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" onclick="TimKiem()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+ 

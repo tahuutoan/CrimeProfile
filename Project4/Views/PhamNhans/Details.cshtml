@@ -1,0 +1,118 @@
+﻿@model Project4.Models.PhamNhan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h4>Thông tin chi tiết phạm nhân</h4>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.TenPhamNhan):
+                @Html.DisplayFor(model => model.TenPhamNhan)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.BiDanh):
+                @Html.DisplayFor(model => model.BiDanh)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.NgaySinh): 
+                @if (Model.NgaySinh.HasValue) 
+                {
+                    <span>@Model.NgaySinh.Value.ToString("dd/MM/yyyy")</span>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.GioiTinh): 
+                @if (Model.GioiTinh > 0)
+                {
+                    @(((Dictionary<int, string>)ViewBag.GioiTinh)[Model.GioiTinh]);
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.QueQuan):
+                @Html.DisplayFor(model => model.QueQuan)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.CMND):
+                @Html.DisplayFor(model => model.CMND)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.PhongGiam.TenPhong):
+                @Html.DisplayFor(model => model.PhongGiam.TenPhong)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.Khu.TenKhu):
+                @Html.DisplayFor(model => model.Khu.TenKhu)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.MucDoNguyHiem):
+                @if (Model.MucDoNguyHiem > 0)
+                {
+                    @(((Dictionary<int, string>)ViewBag.MucDoNguyHiem)[Model.MucDoNguyHiem]);
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.ToiDanh):
+                @if (Model.ToiDanh > 0) 
+                {
+                    @(((Dictionary<int, string>)ViewBag.ToiDanh)[Model.ToiDanh]);
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.QuaTrinhGayAn):
+                @Html.DisplayFor(model => model.QuaTrinhGayAn)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.DiaDiemGayAn):
+                @Html.DisplayFor(model => model.DiaDiemGayAn)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.DisplayNameFor(model => model.SoNgayGiamGiu):
+                @Html.DisplayFor(model => model.SoNgayGiamGiu)
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        @if (String.IsNullOrEmpty(Model.AnhNhanDien))
+        {
+            <img src="~/Common/Image/no-image-icon-23485.png" class="img-fluid" alt="Image" width="200" height="300" />
+        }
+        else
+        {
+            <img src="@Url.Content(Model.AnhNhanDien)" class="img-fluid" alt="Image" width="200" height="300" />
+        }
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Quay lại trang", "Index")
+</p>

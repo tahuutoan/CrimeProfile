@@ -1,0 +1,22 @@
+﻿@model Project4.Models.QuanNguc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<br />
+<h3>Xác nhận xóa quản ngục @Html.DisplayFor(model => model.TenQuanNguc)?</h3>
+<br />  
+<div>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            Trong thời gian chờ quản ngục khác thay thế, các phòng trong khu sẽ được đảm nhiệm bởi :
+            <div id="quanNgucList">
+                @Html.Partial("_PhongDamNhiemBoi")
+            </div>
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,75 @@
+﻿@model Project4.Models.LaoDongCongIch
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h3>Thêm mới phạm nhân lao động cải tạo</h3>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.PhamNhanID, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.PhamNhanID, null, new { htmlAttributes = new { @class = "form-control col-md-4" } })
+                    @Html.ValidationMessageFor(model => model.PhamNhanID, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+        <div class="form-group">
+            @Html.Label("Phòng giam: ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("phongGiam", new SelectList(ViewBag.Phong, "ID", "TenPhong"), new { @class = "form-control  col-md-4", @id = "txtPhong", @onchange = "LoadLaiPhong()" })
+            </div>
+        </div>
+
+        <div id="phamNhan">
+            @Html.Partial("_PhamNhanPartial")
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KhuVucLamViec, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.KhuVucLamViec, null, new { htmlAttributes = new { @class = "form-control col-md-4" } })
+                @Html.ValidationMessageFor(model => model.KhuVucLamViec, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BieuHien, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BieuHien, null, new { htmlAttributes = new { @class = "form-control col-md-4" } })
+                @Html.ValidationMessageFor(model => model.BieuHien, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm mới" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Quay lại trang", "Index")
+</div>
+
+
+@section scripts {
+    <script type="text/javascript">
+        function LoadLaiPhong() {
+            var phongID = $("#txtPhong").val();
+            var link = '@Url.Action("LoadPhamNhan", "LaoDongCongIches", new { phongID = "-1" })';
+            link = link.replace("-1", phongID);
+            $('#phamNhan').load(link);
+        }
+    </script>
+}

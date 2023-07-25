@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="~/Asserts/MasterPage1/css/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/all.min.js"></script>
+
+
+    @*<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+              crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+                crossorigin="anonymous"></script>*@
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="@Url.Action("Index", "TrangChu")">
+            <img class="navbar-brand" src="~/Asserts/MasterPage1/img/Logo công an edit (3).png" alt="logo">
+        </a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    @if (User.IsInRole("QuanNgucTruong"))
+                    {
+                         
+                    }
+                    else
+                    {
+                        <a class="dropdown-item" href="@Url.Action("ThongTinTaiKhoan", "TaiKhoan")">
+                            Thông tin tài khoản
+                        </a>
+                    }
+                    <a class="dropdown-item" href="@Url.Action("LogOffCustom", "Account")">Đăng xuất</a>
+                </div>
+
+
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Thanh công cụ</div>
+                        @*@Url.Action("Index", "Family")*@
+                        @if (User.IsInRole("QuanNgucTruong"))
+                        {
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                               aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><img src="~/Asserts/MasterPage1/img/icon/security1.png" /></div>
+                                <span style="color: cornsilk; font-size: 17px">Quản lí cán bộ </span>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                        }
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                             data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="@Url.Action("Index", "QuanNgucs")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/files.png" /> Danh sách cán bộ
+                                </a>
+                                <a class="nav-link" href="@Url.Action("Index", "CheDoNghiPhepCuaQuanNgucs")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/calendar.png" />
+                                    Quản lí nghỉ phép @*&nbsp*@ của cán bộ
+                                </a>
+                            </nav>
+                        </div>
+                        <!-- zzzzzzzzzzzzzzz -->
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                           aria-expanded="false" aria-controls="collapsePages" id="dropdowTuNhan5">
+                            <div class="sb-nav-link-icon">
+                                <img src="~/Asserts/MasterPage1/img/icon/jail.png" />
+                                <span style="color: cornsilk; font-size: 17px">Quản lí tù nhân </span>
+                            </div>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingOne"
+                             data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="@Url.Action("Index", "PhamNhans")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/files.png" />Danh sách tù nhân
+                                </a>
+                                <a class="nav-link" href="@Url.Action("Index", "Benhs")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/injection.png" />Quản lý bệnh tật
+                                </a>
+                                <a class="nav-link" href="@Url.Action("Index", "ThamGuis")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/meeting.png" />Chế độ thăm hỏi
+                                </a>
+                                <a class="nav-link" href="@Url.Action("Index", "Anxas")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/auction.png" />Chế độ ân xá
+                                </a>
+                                <a class="nav-link" href="@Url.Action("Index", "LaoDongCongIches")">
+                                    <img src="~/Asserts/MasterPage1/img/icon/shovel.png" />Lao động cải tạo
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Tiện ích</div>
+                        <a class="nav-link" href="@Url.Action("Dashboard", "PhamNhans")">
+                            <div class="sb-nav-link-icon" style="color: cornsilk; font-size: 17px">
+                                <img src="~/Asserts/MasterPage1/img/bar-chart.png" /> Thống kê
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">&copy;Trại giam Chí Hòa</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap4.min.js"></script>
+
+    <script src="~/Asserts/MasterPage1/js/datatables-demo.js"></script>
+    <script src="~/Asserts/MasterPage1/js/script.js"></script>
+    <script src="~/Asserts/MasterPage1/js/chart-area-demo.js"></script>
+    <script src="~/Asserts/MasterPage1/js/chart-bar-demo.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

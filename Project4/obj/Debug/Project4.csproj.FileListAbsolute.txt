@@ -1,0 +1,184 @@
+E:\Project4\Project4\project4\Project4\bin\roslyn\csc.exe
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project4\Project4\project4\Project4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project4\Project4\project4\Project4\bin\roslyn\System.Collections.Immutable.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project4\Project4\project4\Project4\bin\roslyn\vbc.exe
+E:\Project4\Project4\project4\Project4\bin\roslyn\VBCSCompiler.exe
+E:\Project4\Project4\project4\Project4\bin\roslyn\VBCSCompiler.exe.config
+E:\Project4\Project4\project4\Project4\bin\Project4.dll.config
+E:\Project4\Project4\project4\Project4\bin\Project4.dll
+E:\Project4\Project4\project4\Project4\bin\Project4.pdb
+E:\Project4\Project4\project4\Project4\bin\Antlr3.Runtime.dll
+E:\Project4\Project4\project4\Project4\bin\EntityFramework.dll
+E:\Project4\Project4\project4\Project4\bin\EntityFramework.SqlServer.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Google.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Web.Infrastructure.dll
+E:\Project4\Project4\project4\Project4\bin\Newtonsoft.Json.dll
+E:\Project4\Project4\project4\Project4\bin\Owin.dll
+E:\Project4\Project4\project4\Project4\bin\PagedList.dll
+E:\Project4\Project4\project4\Project4\bin\PagedList.Mvc.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.Helpers.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.Mvc.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.Optimization.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.Razor.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.Deployment.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.dll
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.Razor.dll
+E:\Project4\Project4\project4\Project4\bin\WebGrease.dll
+E:\Project4\Project4\project4\Project4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project4\Project4\project4\Project4\bin\PagedList.xml
+E:\Project4\Project4\project4\Project4\bin\PagedList.Mvc.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.Helpers.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.Mvc.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.Optimization.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.Razor.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.Deployment.xml
+E:\Project4\Project4\project4\Project4\bin\System.Web.WebPages.Razor.xml
+E:\Project4\Project4\project4\Project4\bin\Antlr3.Runtime.pdb
+E:\Project4\Project4\project4\Project4\bin\Newtonsoft.Json.xml
+E:\Project4\Project4\project4\Project4\bin\EntityFramework.xml
+E:\Project4\Project4\project4\Project4\bin\EntityFramework.SqlServer.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Google.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project4\Project4\project4\Project4\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project4\Project4\project4\Project4\obj\Debug\Project4.dll
+E:\Project4\Project4\project4\Project4\obj\Debug\Project4.pdb
+E:\Project4\Project4\project4\Project4\obj\Debug\Project4.csprojResolveAssemblyReference.cache
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan1.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan10.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan11.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan12.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan13.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan2.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan3.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan4.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan5.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan6.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan7.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan8.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\PhamNhans\TuNhan9.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\41415f26-51e0-4c21-b881-1221233de8c6\khong-ngai.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\41415f26-51e0-4c21-b881-1221233de8d1\khong-ngai.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\41415f26-51e0-4c21-b881-1221233de8d1\unnamed.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca1.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca10.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca2.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca4.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca6.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca7.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\ca8.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\khong-ngai.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\unnamed (1).jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\unnamed (2).jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\unnamed (3).jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\unnamed (4).jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\Common\Image\QuanNgucs\Ảnh cán bộ\unnamed.jpg
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\csc.exe
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\System.Collections.Immutable.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\vbc.exe
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\VBCSCompiler.exe
+D:\Project4Repository\New project0325\project4\Project4\bin\roslyn\VBCSCompiler.exe.config
+D:\Project4Repository\New project0325\project4\Project4\bin\Project4.dll.config
+D:\Project4Repository\New project0325\project4\Project4\bin\Project4.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Project4.pdb
+D:\Project4Repository\New project0325\project4\Project4\bin\Antlr3.Runtime.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\EntityFramework.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\EntityFramework.SqlServer.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Google.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Web.Infrastructure.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Newtonsoft.Json.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Owin.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\PagedList.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\PagedList.Mvc.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Helpers.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Mvc.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Optimization.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Razor.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.Deployment.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.Razor.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\WebGrease.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\xunit.abstractions.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\xunit.core.dll
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\PagedList.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\PagedList.Mvc.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Helpers.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Mvc.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Optimization.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.Razor.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.Deployment.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\System.Web.WebPages.Razor.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Antlr3.Runtime.pdb
+D:\Project4Repository\New project0325\project4\Project4\bin\xunit.abstractions.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\xunit.core.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Newtonsoft.Json.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\EntityFramework.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\EntityFramework.SqlServer.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Google.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project4Repository\New project0325\project4\Project4\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.csprojAssemblyReference.cache
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.Migrations.update03315.resources
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.csproj.GenerateResource.cache
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.csproj.CoreCompileInputs.cache
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.csproj.CopyComplete
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.dll
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.pdb
+D:\Project4Repository\New project0325\project4\Project4\obj\Debug\Project4.Migrations.upadteapchot.resources

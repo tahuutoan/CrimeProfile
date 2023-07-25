@@ -1,0 +1,19 @@
+﻿@model Project4.Models.LaoDongCongIch
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<br />
+<h2>Xác nhận xóa</h2>
+<br />
+<div>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại trang", "Index")
+        </div>
+    }
+</div>

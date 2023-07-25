@@ -1,0 +1,53 @@
+﻿@model Project4.Models.DoiMatKhauParams
+@{
+    ViewBag.Title = "DoiMatkhau";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<br />
+<h2>Đổi mật khẩu</h2>
+<br />
+<br />
+<div style="margin-left: 100px">
+
+    <p style="color:red">
+        @if (@ViewBag.IsValid != "")
+        {
+            @ViewBag.IsValid
+        }
+    </p>
+
+    @using (Html.BeginForm("DoiMatKhau", "TaiKhoan", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>
+                    Mật khẩu hiện tại:
+                    @Html.EditorFor(model => model.MatKhauHienTai, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MatKhauHienTai, "", new { @class = "text-danger" })<hr />
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Mật khẩu mới:
+                    @Html.EditorFor(model => model.MatKhauMoi, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MatKhauMoi, "", new { @class = "text-danger" })<hr />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Xác nhận lại mật khẩu:
+                    @Html.EditorFor(model => model.XacNhanMatKhauMoi, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.XacNhanMatKhauMoi, "", new { @class = "text-danger" })<hr />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Cập nhật" class="btn btn-success" /> &nbsp;&nbsp;
+                    <a class="btn btn-warning" href="@Url.Action("ThongTinTaiKhoan", "TaiKhoan")">Hủy bỏ</a>
+                </td>
+            </tr>
+        </table>
+    }
+</div>
